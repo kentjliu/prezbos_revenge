@@ -48,24 +48,6 @@ class Player:
         if keys[pygame.K_UP] and self.player_y > 0:
             self.player_y -= 3
 
-    ## def player_jump(self):
-    #    keys = pygame.key.get_pressed()
-    #    if not self.is_jump:
-    #        if keys[pygame.K_SPACE]:
-    #            self.is_jump = True
-    #            jump.play()
-    #    else:
-    #        if self.jump_count >= -10:
-    #            # jump formula
-    #            neg = 1
-    #            if self.jump_count < 0:
-    #                neg = -1
-    #            self.player_y -= (self.jump_count ** 2) * 0.5 * neg
-    #            self.jump_count -= 1
-    #       else:
-    #            self.is_jump = False
-    #            self.jump_count = 10
-
 
 class Student:
     def __init__(self):
@@ -249,7 +231,6 @@ def main_loop():
 
         # Class functions
         player.move_player_in_screen()
-        #player.player_jump()
         student.generate_students(player)
         machine.throw_machine()
         student.regenerate_students()
